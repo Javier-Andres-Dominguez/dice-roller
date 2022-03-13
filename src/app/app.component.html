@@ -1,0 +1,46 @@
+<p-card>
+  <ng-template pTemplate="header">
+    <div style="height: 10px;"></div>
+    <div style="margin: 0 auto; width:70px;"><img src="../assets/dado.png" alt="dado negro"></div>
+  </ng-template>
+  <div align='center'>
+    <h1> {{title}} </h1>
+  
+    <h2> {{subtitle}} </h2>
+  
+  </div>
+  
+  <div align=center>
+    <div width=60px align=left>
+        <b>
+          Datos: 
+        </b>
+        <div>
+            <label>Número de dados: </label>
+            <p-inputNumber [(ngModel)]="inputTotalDados" [min]="0" [max]="100" (change)="onKeyDices($event)"></p-inputNumber>
+        </div>
+        <div>
+            <label>Número de caras: </label>
+            <p-inputNumber [(ngModel)]="inputCaras" [min]="0" [max]="20" (change)="onKeyFaces($event)"></p-inputNumber>
+        </div>
+    <app-dado [inputCaras]="inputCaras" [inputTotalDados]="inputTotalDados" (messageEvent)="receiveMessage($event)"></app-dado>
+    <b>
+      Total tirada: {{TotalTirada}}
+    </b>
+
+    </div>
+  </div>
+  
+  <div>
+    <app-tabla-tiradas [inputCaras]="inputCaras" [inputTotalDados]="inputTotalDados" id="TablaTiradasComponent"></app-tabla-tiradas>
+  </div>
+  
+  <div>
+    <app-grafica id="GraficaComponent"></app-grafica>
+  </div>
+  <ng-template pTemplate="footer">
+      Autor: {{autor}}
+  </ng-template>
+</p-card>
+
+

@@ -1,0 +1,24 @@
+h1 {
+    vertical-align:top;
+    display:inline-block;
+    color:#494D56;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-style:normal;
+    font-weight: 400;
+    font-size:34pt;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+h2 {
+    color:#083442;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size:22pt;
+    margin-top:20px;
+    font-style:italic;
+    font-weight: 400;
+}
+
+b {
+    font-size:22pt;
+}
